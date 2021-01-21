@@ -19,7 +19,7 @@ namespace PrimeFuncPack.Linq.Collections.Tests
             IEnumerable<StructType> source = null!;
 
             var ex = Assert.Throws<ArgumentNullException>(() => source.ForEach(_ => { }));
-            Assert.AreEqual("source", ex.ParamName);
+            Assert.AreEqual("source", ex!.ParamName);
         }
 
         [Test]
@@ -29,7 +29,7 @@ namespace PrimeFuncPack.Linq.Collections.Tests
             Action<RefType> action = null!;
 
             var ex = Assert.Throws<ArgumentNullException>(() => source.ForEach(action));
-            Assert.AreEqual("action", ex.ParamName);
+            Assert.AreEqual("action", ex!.ParamName);
         }
 
         [Test]
